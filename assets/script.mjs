@@ -13,33 +13,45 @@ getHeaderDate();
 
 myDay.forEach(function(thisHour) {
 
-    var hourRow = $("<tr>").attr({
+    var hourRow = $("<div>").attr({
         "id": `${thisHour.hour}`,
         "class": "row"
     });
-    $("tbody").append(hourRow);
+    $(".container").append(hourRow);
 
     
-    var hourField = $("<td>")
+    var hourField = $("<div>")
         .text(`${thisHour.hour}${thisHour.meridiem}`)
         .attr({
-            "class": "hour"
+            "class": "col-md-2 hour"
     });
 
 
-    var hourPlan = $("<td>")
+    var hourPlan = $("<div>")
         .attr({
-            "class": "description"
+            "class": "col-md-9 description p-0"
         });
     var planData = $("<textarea>");
     hourPlan.append(planData);
-    if (thisHour.hour < moment().format())
+    if (thisHour.time < moment().format("HH")) {
+        planData.attr ({
+            "class": "past"
+        })
+    } else if (thisHour.time === moment().format("HH")) {
+        planData.attr({
+            "class": "present"
+        })
+    } else if (thisHour.time > moment().format("HH")) {
+        planData.attr({
+            "class": "future"
+        })
+    }
 
 
     var saveButton = $("<i class='far fa-save fa-lg'></i>")
-    var savePlan = $("<td>")
+    var savePlan = $("<div>")
         .attr({
-            "class": "saveBtn"
+            "class": "col-md-1 saveBtn pt-4"
     });
 
 
