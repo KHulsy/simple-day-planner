@@ -63,48 +63,7 @@ var myDay = [
         meridiem: "pm",
         reminder: ""
     },
-    {
-        id: "9",
-        hour: "06",
-        time: "18",
-        meridiem: "pm",
-        reminder: ""
-    },
-    {
-        id: "10",
-        hour: "07",
-        time: "19",
-        meridiem: "pm",
-        reminder: ""
-    },
-    {
-        id: "11",
-        hour: "08",
-        time: "20",
-        meridiem: "pm",
-        reminder: ""
-    },
-    {
-        id: "12",
-        hour: "09",
-        time: "21",
-        meridiem: "pm",
-        reminder: ""
-    },
-    {
-        id: "13",
-        hour: "10",
-        time: "22",
-        meridiem: "pm",
-        reminder: ""
-    },
-    {
-        id: "14",
-        hour: "11",
-        time: "23",
-        meridiem: "pm",
-        reminder: ""
-    }
+    
 ]
 
 // gets data for the header date
